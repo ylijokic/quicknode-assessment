@@ -1,5 +1,5 @@
 import React from 'react'
-import { Node } from '../types'
+import { Node } from '../lib/types'
 
 export interface CollectionCardProps {
     node: Node;

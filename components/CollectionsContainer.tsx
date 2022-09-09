@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Collection, Edge } from '../types'
+import { Collection, Edge } from '../lib/types'
 import Button from './Button';
 import CollectionCard from './CollectionCard'
 
