@@ -14,11 +14,13 @@ const CollectionsContainer = ({ collection, handleWalletConnection }: Collection
     const hasNextPage = collection.pageInfo?.hasNextPage;
 
     const handlePrevious = () => {
-        console.log(collection.pageInfo.startCursor);
+        const startCursor = collection.pageInfo.startCursor;
+        console.log(`Start Cursor-> ${startCursor}`);
     }
 
     const handleNext = () => {
-        console.log(collection.pageInfo.endCursor);
+        const endCursor = collection.pageInfo.endCursor;
+        console.log(`End Cursor-> ${endCursor}`);
     }
 
     const handleOrderBy = () => {
@@ -38,6 +40,7 @@ const CollectionsContainer = ({ collection, handleWalletConnection }: Collection
                             <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" />
                         </svg>
                         </button>
+                        <p className="text-xs">*Defaulted to SALES</p>
                     </div>
                     {isOpen && 
                         <div className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
