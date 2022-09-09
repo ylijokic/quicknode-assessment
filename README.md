@@ -18,6 +18,13 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+# Technologies Used
+- Next.js
+- React
+- TypeScript
+- Tailwind
+- GraphQL
+- Apollo
 
 # Notes / Future Steps
 1. "Connecting" to a user's wallet is currently limited to local component state. 
@@ -25,9 +32,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
     - A next step would be to use a library such as [web3.js](https://github.com/ChainSafe/web3.js) to actually handle establishing an Ethereum wallet connection. 
 2. Navigating between collection pages, as well as giving the user the ability to select the order of the collections, was out of scope for the time alloted in this assessment. 
    
-    - Currently, the graphQL query is only fetching a fixed number of collections, as well as a fixed value for the order the collections are returned. 
+    - Currently, the GraphQL query is only fetching a fixed number of collections, as well as a fixed value for the order the collections are returned. 
     - I began to implement a `useTrendingCollections` hook that has the ability to accept query parameters for `first`, `after`, `orderBy`, and `orderDirection`. This will allow for pagination and dynamic sorting.
-    - A next step would be to connect the client to this new hook so it can be used within the `Collectionscontainer` component.
+    - A next step would be to connect the client to this new hook so it can be used within the `CollectionsContainer` component.
 3. A possible feature to be implemented a future time would be to utilize the `TokenImages` query to display the collection image using the Node's `contractAddress`.
 
 
