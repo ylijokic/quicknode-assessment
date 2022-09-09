@@ -27,7 +27,7 @@ const Home = ({ collection }: HomeProps) => {
       <div className="rounded overflow-hidden shadow-lg border-4 border-solid bg-sky-50 m-4">
         <div className="flex flex-col px-6 py-4 items-center">
             <div className="font-bold text-xl mb-2">View Trending Connections:</div>
-            <Button message='Connect Wallet' color='blue' onClick={handleWalletConnection} />
+            <Button message='Connect Wallet' type='primary' onClick={handleWalletConnection} />
         </div>
       </div>
     : <CollectionsContainer collection={collection} handleWalletConnection={handleWalletConnection}/>

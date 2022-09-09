@@ -1,23 +1,32 @@
 import React from 'react'
 
-export type ButtonColor = 'red' | 'blue' | 'green';
+export type ButtonColor = 'primary' | 'cancel';
 
 export interface ButtonProps {
     message: string;
-    color: ButtonColor;
-    opacity?: number;
+    type: ButtonColor;
     onClick?: () => void;
 }
 
-const Button = ({ message, color, opacity, onClick }: ButtonProps) => {
+const Button = ({ message, type, onClick }: ButtonProps) => {
     return (
         <div className="flex flex-col justify-center items-center m-4">
+        {type === 'primary' 
+        ? 
             <button 
                 onClick={onClick} 
-                className={`bg-${color}-500 hover:bg-${color}-700 text-white font-bold py-2 px-4 rounded-full opacity-${opacity}`}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
             >
                 {message}
             </button> 
+        : 
+            <button 
+                onClick={onClick} 
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+            >
+                {message}
+            </button>
+        } 
         </div> 
     )
 }

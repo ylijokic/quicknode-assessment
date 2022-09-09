@@ -28,7 +28,7 @@ const CollectionsContainer = ({ collection, handleWalletConnection }: Collection
     return (
         <>
             <main className="flex flex-col justify-center items-center">
-                <Button message='Disconnect Wallet' color='red' onClick={handleWalletConnection} />
+                <Button message='Disconnect Wallet' type='cancel' onClick={handleWalletConnection} />
                 
                 <div className="relative inline-block text-left">
                     <div>
@@ -63,14 +63,12 @@ const CollectionsContainer = ({ collection, handleWalletConnection }: Collection
             <div className="flex m-4 justify-between">
                 <Button 
                     message='Previous 10' 
-                    color={hasPreviousPage ? 'green' : 'red'} 
-                    opacity={hasPreviousPage ? 100 : 50}
+                    type={hasPreviousPage ? 'primary' : 'cancel'} 
                     onClick={handlePrevious} 
                 />
                 <Button 
                     message='Next 10' 
-                    color={hasNextPage ? 'green' : 'red'} 
-                    opacity={hasNextPage ? 100 : 50}
+                    type={hasNextPage ? 'primary' : 'cancel'} 
                     onClick={handleNext}
                 />
             </div>
