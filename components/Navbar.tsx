@@ -3,6 +3,7 @@ import React from 'react'
 export interface NavbarProps {
     message?: string;
 }
+
 const Navbar = ({ message }: NavbarProps) => {
   return (  
     <nav className="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
@@ -15,7 +16,7 @@ const Navbar = ({ message }: NavbarProps) => {
                     data-mdb-ripple="true" 
                     data-mdb-ripple-color="light"
                 >
-                    {message}
+                    {message ?? 'Trending NFT Collections!'}
                 </p>
                 </li>
             </ul>
